@@ -9,7 +9,7 @@ connect();
 
 app.use(express.json());
 app.use("/api", [goodsRouter, cartsRouter]);
-app.get("/", () => {
+app.get("/", (req, res) => {
     res.send("Hello Sparta Node Projects!!");
 });
 app.listen(port, () => {
